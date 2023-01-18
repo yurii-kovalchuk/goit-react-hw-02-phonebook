@@ -1,5 +1,6 @@
 import { Formik } from 'formik';
 import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
 import { FormWrapper, Label, Input, Btn } from './ContactForm.styled';
 
 export const ContactForm = ({ addContact }) => {
@@ -39,4 +40,8 @@ export const ContactForm = ({ addContact }) => {
       </FormWrapper>
     </Formik>
   );
+};
+
+ContactForm.proprTypes = {
+  addContact: PropTypes.func.isRequired,
 };
