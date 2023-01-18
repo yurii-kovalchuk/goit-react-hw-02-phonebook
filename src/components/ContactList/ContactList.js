@@ -1,10 +1,12 @@
+import { Item } from './ContactList.styled';
+
 export const ContactList = ({ contacts }) => {
   return (
     <ul>
-      {contacts.map(contact => (
-        <li key={contact.id}>
-          {contact.name}: {contact.number}
-        </li>
+      {contacts.map(({ id, name, number }) => (
+        <Item key={id}>
+          {name}: {number}
+        </Item>
       ))}
     </ul>
   );

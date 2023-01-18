@@ -7,13 +7,13 @@ export const ContactForm = ({ addContact }) => {
     name: '',
     number: '',
   };
-  const formSubmit = ({ name, number }, { resetForm }) => {
+  const onSubmit = ({ name, number }, { resetForm }) => {
     addContact(name, number, nanoid());
     resetForm();
   };
 
   return (
-    <Formik initialValues={initialValues} onSubmit={formSubmit}>
+    <Formik initialValues={initialValues} onSubmit={onSubmit}>
       <FormWrapper>
         <Label>
           Name
